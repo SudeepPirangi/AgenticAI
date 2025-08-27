@@ -5,12 +5,14 @@ description = "This is only a UV project created with an intent to learn and pla
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "certifi>=2025.8.3",
     "gradio>=5.43.1",
     "ipython>=9.4.0",
     "openai>=1.100.2",
     "openai-agents>=0.2.9",
     "pypdf>=6.0.0",
     "python-dotenv>=1.1.1",
+    "sendgrid>=6.12.4",
 ]
 
 [dependency-groups]
