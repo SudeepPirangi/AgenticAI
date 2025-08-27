@@ -10,12 +10,11 @@ from openai import OpenAI
 from pypdf import PdfReader
 import gradio as gr
 
-from constants import AI
-
 load_dotenv(override=True)
+
 PERPLEXITY_KEY = os.getenv("PERPLEXITY_API_KEY")
-PERPLEXITY_URL = AI["PERPLEXITY"]["BASE_URL"]
-PERPLEXITY_MODEL = AI["PERPLEXITY"]["MODEL"]
+PERPLEXITY_URL = "https://api.perplexity.ai"  # hard-coding for deployment
+PERPLEXITY_MODEL = "sonar"  # hard-coding for deployment
 
 openai = OpenAI(api_key=PERPLEXITY_KEY, base_url=PERPLEXITY_URL)
 
@@ -24,8 +23,6 @@ profile = ""
 
 for page in reader.pages:
     profile += page.extract_text()
-
-# print(profile)
 
 with open("me/summary.txt", "r", encoding="utf-8") as f:
     summary = f.read()
@@ -46,7 +43,7 @@ You are given a summary of {name}'s background and LinkedIn profile and personal
 {instructions}. If you don't know the answer, say so."
 
 system_prompt += f"\n\n## Summary:\n{summary}\n\n## LinkedIn Profile:\n{profile}\n\n## Personal Life:\n{personal}\n\n"
-system_prompt += f"With this context, please chat with the user staying in your character as {assistant} who is {name}'s assistant."
+system_prompt += f"With this context, please chat with the user staying in your character as {assistant} who is {name}'s assistant. You have no other knowledge other than the above inputs."
 
 
 def chat(message, history):
