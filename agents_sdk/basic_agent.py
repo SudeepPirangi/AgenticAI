@@ -1,4 +1,4 @@
-"""Simple Agent from OpenAI - Agents SDK"""
+"""1. Simple Agent from OpenAI - Agents SDK"""
 
 import asyncio
 from agents import (

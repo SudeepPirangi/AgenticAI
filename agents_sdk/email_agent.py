@@ -1,12 +1,19 @@
-"""Sends cold sales emails"""
+"""
+2. Sends cold sales emails
+
+Uses 3 Agents to generate 3 email bodies
+A 4th Agent calls sales email picker is used to select one best email of those 3
+Finally a function to send emails is called to send the selected email to the recipient
+"""
 
 import asyncio
 from agents import trace, Runner
 
-from common import PERPLEXITY_URL, PERPLEXITY_MODEL, perplexity_ai, send_email
+from common import GEMINI_URL, GEMINI_MODEL, gemini_ai, send_email
 
 
 def split_subject_body(text):
+    """Splits email subject and body from the text"""
     lines = text.splitlines()
     subject = None
     body_lines = []
@@ -68,15 +75,11 @@ async def main():
     prompt = "Write a cold sales email"
 
     try:
-        sales_agent1 = await perplexity_ai.agent(
-            "Professional Sales Agent", instructions1
-        )
-        sales_agent2 = await perplexity_ai.agent("Engaging Sales Agent", instructions2)
-        sales_agent3 = await perplexity_ai.agent("Busy Sales Agent", instructions3)
+        sales_agent1 = await gemini_ai.agent("Professional Sales Agent", instructions1)
+        sales_agent2 = await gemini_ai.agent("Engaging Sales Agent", instructions2)
+        sales_agent3 = await gemini_ai.agent("Busy Sales Agent", instructions3)
 
-        sales_picker = await perplexity_ai.agent(
-            "sales_picker", sales_picker_instructions
-        )
+        sales_picker = await gemini_ai.agent("sales_picker", sales_picker_instructions)
 
         with trace("Selection from sales people"):
             results = await asyncio.gather(
@@ -114,7 +117,5 @@ async def main():
 
 
 if __name__ == "__main__":
-    print(
-        f"\nRunning OpenAI Agent with {PERPLEXITY_URL} and model as {PERPLEXITY_MODEL}"
-    )
+    print(f"\nRunning OpenAI Agent with {GEMINI_URL} and model as {GEMINI_MODEL}")
     asyncio.run(main())

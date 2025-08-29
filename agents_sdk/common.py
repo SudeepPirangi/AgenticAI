@@ -12,7 +12,9 @@ sys.path.append(parent_dir)
 
 from constants import AI
 from utils import emailer as email_service
-from ai.perplexity import Perplexity
+
+from ai.perplexity import Perplexity, agent_tool as agent_tool_function
+from ai.gemini import Gemini
 
 # Now import your module from the parent directory
 # from constants import AI
@@ -23,5 +25,17 @@ PERPLEXITY_KEY = os.getenv("PERPLEXITY_API_KEY")
 PERPLEXITY_URL = AI["PERPLEXITY"]["BASE_URL"]
 PERPLEXITY_MODEL = AI["PERPLEXITY"]["MODEL"]
 
+GEMINI_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_URL = AI["GEMINI"]["BASE_URL"]
+GEMINI_MODEL = AI["GEMINI"]["MODEL"]
+
+# Perplexity
 perplexity_ai = Perplexity()
+
+# Gemini
+gemini_ai = Gemini()
+
+agent_tool = agent_tool_function
+
 send_email = email_service.send_email
+send_email_tool = email_service.send_email_tool
