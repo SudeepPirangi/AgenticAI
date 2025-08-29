@@ -42,7 +42,7 @@ class Perplexity:
 
     async def agent(self, name: str, instructions: str, tools=[], model: str = MODEL):
         """Perplexity's own agent with OpenAI SDK"""
-        print("Setting model as", model)
+        print(f"Perplexity | model: {model} | Agent: {name}")
         # setting up perplexity client
         perplexity_ai = AsyncOpenAI(base_url=BASE_URL, api_key=PERPLEXITY_API_KEY)
 
@@ -57,7 +57,6 @@ class Perplexity:
 @function_tool
 async def agent_tool(name: str, instructions: str, tools=[]):
     """Perplexity's own agent tool works only with model as sonar-pro/sonar-reasoning-pro"""
-
     # setting up perplexity client
     perplexity_ai = AsyncOpenAI(base_url=BASE_URL, api_key=PERPLEXITY_API_KEY)
 

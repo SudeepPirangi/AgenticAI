@@ -3,10 +3,7 @@
 import os
 from dotenv import load_dotenv
 from openai import OpenAI, AsyncOpenAI
-from agents import (
-    OpenAIChatCompletionsModel,
-    Agent,
-)
+from agents import Agent, OpenAIChatCompletionsModel
 
 from constants import AI
 
@@ -46,9 +43,12 @@ class Gemini:
         tools=[],
         handoff_description="",
         handoffs=[],
+        input_guardrails=[],
+        output_type=None,
         model: str = MODEL,
     ):
         """Gemini's own agent with OpenAI Agent SDK"""
+        print(f"Gemini | model: {model} | Agent: {name}")
         # setting up gemini client
         gemini_ai = AsyncOpenAI(base_url=BASE_URL, api_key=GEMINI_API_KEY)
 
@@ -59,4 +59,6 @@ class Gemini:
             tools=tools,
             handoff_description=handoff_description,
             handoffs=handoffs,
+            input_guardrails=input_guardrails,
+            output_type=output_type,
         )
