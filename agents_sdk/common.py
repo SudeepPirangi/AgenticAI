@@ -10,14 +10,13 @@ sys.path.append(parent_dir)
 
 # print("\nDirectory", parent_dir)
 
+# Now import your module from the parent directory
 from constants import AI
 from utils import emailer as email_service
 
 from ai.perplexity import Perplexity, agent_tool as agent_tool_function
 from ai.gemini import Gemini
 
-# Now import your module from the parent directory
-# from constants import AI
 
 load_dotenv(override=True)
 

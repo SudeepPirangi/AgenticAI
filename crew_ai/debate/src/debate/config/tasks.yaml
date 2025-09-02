@@ -1,0 +1,37 @@
+foreign_policy_expert_task:
+  description: >
+    Conduct a thorough research about {topic} and its impact on {focus_area}
+    Make sure you find any interesting and relevant information on {focus_area}.
+    Gather the potential benefits and drawbacks of {topic} on {focus_area}.
+  expected_output: >
+    A list with 10 bullet points of the most relevant information about {topic} on {focus_area}.
+  agent: foreign_policy_expert
+  output_file: output/foreign_policy_expert.md
+
+pro_american_citizen_task:
+  description: >
+    Research unvetted social media content on {topic} and {focus_area}.
+    Present points only supporting the {topic} by ignoring the impact on {focus_area}
+  expected_output: >
+    A list with 10 bullet points of the {topic}
+  agent: pro_american_citizen
+  output_file: output/pro_american_citizen.md
+
+debate_analyst_task:
+  description: >
+    Read the debate transcripts or points presented by the debaters, gather some key points from each debater.
+    Analyse these points and transpile them into simple, easy understandable terms.
+  expected_output: >
+    A list with bullet points of debater's arguments in simple english to be understandable by global audience of all languages.
+    Highlight the actual key phrases from each argument.
+  agent: debate_analyst
+  output_file: output/debate_analyst.md
+
+judge_task:
+  description: >
+    Remember the goal and background to draw a conclusion based on the arguments presented by the debaters.
+    Present a clear verdict by explaining the reasons for this judgement.
+  expected_output: >
+    A clear and consise judgement purely based on the points from the debate. The judgement is totally unbiased.
+  agent: judge
+  output_file: output/judge.md
