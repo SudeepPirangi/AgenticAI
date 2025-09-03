@@ -1,0 +1,54 @@
+{
+  "companies": [
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "reason": "Consistently a top holding and a major driver of the AI revolution, NVIDIA's performance and product announcements are always in the news. Also a top holding in QQQ and VOO."
+    },
+    {
+      "name": "Microsoft Corporation",
+      "ticker": "MSFT",
+      "reason": "A leader in cloud computing and AI integration, Microsoft's strategic moves in these areas keep it in the spotlight. Also a top holding in QQQ and VOO."
+    },
+    {
+      "name": "Apple Inc.",
+      "ticker": "AAPL",
+      "reason": "Despite its large size, Apple continues to be a focus for its product innovation, services growth, and its role in the broader tech ecosystem. Also a top holding in QQQ and VOO."
+    },
+    {
+      "name": "Amazon.com, Inc.",
+      "ticker": "AMZN",
+      "reason": "Its cloud computing division (AWS) and its e-commerce dominance, coupled with AI investments, make it a consistent newsmaker. Also a top holding in QQQ and VOO."
+    },
+    {
+      "name": "Broadcom Inc.",
+      "ticker": "AVGO",
+      "reason": "A key player in semiconductor solutions for networking and infrastructure, essential for AI data centers, making it a frequently discussed company within QQQ."
+    },
+    {
+      "name": "Meta Platforms Inc.",
+      "ticker": "META",
+      "reason": "As a social media and metaverse giant investing heavily in AI and virtual reality, Meta's strategies and financial results are closely watched. Top holding in QQQ."
+    },
+    {
+      "name": "Gold Fields Ltd",
+      "ticker": "GFI",
+      "reason": "A major global gold producer, its operational updates and production figures are closely watched by investors in the gold mining sector, which is trending due to gold prices."
+    },
+    {
+      "name": "Anglogold Ashanti Plc",
+      "ticker": "AU",
+      "reason": "Another significant player in gold mining, its performance is often tied to broader trends in gold prices and exploration success, making it relevant to the trending GDX ETF."
+    },
+    {
+      "name": "Kinross Gold Corp",
+      "ticker": "KGC",
+      "reason": "This Canadian-based gold mining company is a substantial holding in GDX, and its quarterly results and project developments are key indicators for the ETF's performance."
+    },
+    {
+      "name": "Zijin Mining Group Co. Ltd.",
+      "ticker": "2899.HK / CJZTF",
+      "reason": "A large Chinese mining company with significant gold operations, its global impact and production levels are also relevant to the performance of the trending GDX ETF."
+    }
+  ]
+}

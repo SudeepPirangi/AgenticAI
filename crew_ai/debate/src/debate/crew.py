@@ -21,7 +21,7 @@ class Debate:
 
     @after_kickoff
     def post_kickoff(self, output):
-        print("After kickoff", output)
+        print("After kickoff")
         return output
 
     @agent
