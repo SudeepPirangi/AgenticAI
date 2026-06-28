@@ -33,4 +33,8 @@ AI: dict[str, dict[str, str]] = {
         "MODEL": "gemini-2.0-flash",
         "BASE_URL": "https://api.groq.com/openai/v1",
     },
+    "ATOMESUS": {
+        "MODEL": "cipher",
+        "BASE_URL": "https://api.atomesus.com/v1",
+    },
 }

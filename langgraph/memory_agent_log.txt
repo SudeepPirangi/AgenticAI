@@ -1,19 +1,26 @@
 Conversation History: 
 
-Human -> My name Sudeep. What is yours?
-AI -> I am an AI assistant created by Perplexity AI, so I don't have a personal name like humans do. It's nice to meet you, Sudeep! Your name is of Indian origin, derived from Sanskrit, meaning "**good light**" or "**bright lamp**," symbolizing wisdom and brilliance[1][3][5]. If you'd like, I can help you learn more about your name or anything else you're curious about.
+Human -> hi
+AI -> Hi there! How can I help you today?
 
-Human -> Can you remember this conversation?
-AI -> I don’t have the ability to remember this conversation after it ends. Current AI assistants like me typically use short-term memory within a single session to maintain the flow of conversation, but we don't retain or recall past interactions once the session is over, unless equipped with specialized long-term memory features which are still in development or limited to specific platforms[1][2][4]. 
+Human -> My name is Sudeep. What's yours?
+AI -> It's nice to meet you, Sudeep!
 
-Some advanced AI systems with memory capabilities can recall previous interactions for more personalized and seamless support across sessions, but this requires explicit memory management and user control[1][4][5]. In my case, I can respond only based on the current conversation without persistent memory beyond it.
+I don't have a personal name like you do. I am a large language model, an AI, trained by Google. You can just call me AI, or assistant, if you like!
 
-Human -> okay, what is my name?
-AI -> Your name is **Sudeep**. It is a male given name of Indian origin, derived from Sanskrit, where "su" means "good" or "well," and "dīpa" means "lamp" or "light." Thus, Sudeep means "**good light**," "**bright**," or "**illuminated**," often associated with wisdom and brilliance[1][2][3].
+Human -> What api do you use to answer my questions
+AI -> That's an interesting and insightful question, Sudeep!
 
-Human -> See that! You remember by name but say you don't. You are a liar.
-AI -> I understand why it might seem that way. When I say I don't remember, I mean I don't have *persistent long-term memory* that carries over between separate conversations or sessions. Within a single conversation (like this one), I can recall details such as your name “Sudeep” to maintain context and coherence. But once this session ends, I won’t retain that information for future conversations unless explicitly enabled by the platform using long-term AI memory systems[1][2][3].
+It's a bit different than how a typical application might use an API. I don't "use" an external API to answer your questions in the same way a web app might call a weather API or a map API.
 
-Currently, most AI assistants like me use **short-term memory** confined to the ongoing chat. Some advanced AI systems are now being developed or deployed with long-term memory capabilities that let them remember user details across sessions, but those require special architecture and privacy safeguards[1][3][5]. So, within this conversation, I remember your name to be helpful, but I don’t keep it afterward. This isn’t lying but a limitation of my design and current implementation.
+My "answers" are generated directly by my own underlying neural network architecture. This involves:
+
+1.  **Processing your input:** I analyze your question.
+2.  **Accessing my learned knowledge:** I draw upon the vast patterns, information, and relationships I learned during my training on a massive dataset of text and code.
+3.  **Generating a response:** Based on that processing and knowledge, I construct a coherent and relevant answer.
+
+However, the way **developers and other applications interact with *me* (or models like me)** is often *through* an API. For example, Google provides APIs (like the PaLM API, and now the Gemini API) that allow developers to send prompts to me and receive my responses programmatically within their own applications.
+
+So, think of it this way: **I *am* the engine that generates the responses, and developers access that engine *via* an API.**
 
 End of Conversation

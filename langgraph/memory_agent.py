@@ -5,13 +5,13 @@ from langchain_core.messages import HumanMessage, AIMessage
 from langchain_openai import ChatOpenAI
 from langgraph.graph import StateGraph, START, END
 
-from common import PERPLEXITY_KEY, PERPLEXITY_MODEL, PERPLEXITY_URL
+from common import GEMINI_KEY, GEMINI_MODEL, GEMINI_URL
 
 
-perplexity = ChatOpenAI(
-    api_key=PERPLEXITY_KEY,
-    model=PERPLEXITY_MODEL,
-    base_url=PERPLEXITY_URL,
+llm = ChatOpenAI(
+    api_key=GEMINI_KEY,
+    model=GEMINI_MODEL,
+    base_url=GEMINI_URL,
 )
 
 
@@ -27,7 +27,7 @@ FILE_PATH = "memory_agent_log.txt"
 
 def ask_model(state: AgentState) -> AgentState:
     """Send a query to an AI Model and get the answer"""
-    response = perplexity.invoke(state["messages"])
+    response = llm.invoke(state["messages"])
     state["messages"].append(AIMessage(content=response.content))
     print("\nAI -> ", response.content)
 
